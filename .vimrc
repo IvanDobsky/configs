@@ -1,0 +1,28 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"ColorTheme
+Plug 'morhetz/gruvbox'
+"TMux
+Plug 'christoomey/vim-tmux-navigator'
+"nginx syntax hl
+Plug 'mutewinter/nginx.vim'
+"Git
+Plug 'tpope/vim-fugitive'
+
+
+call plug#end()
+
+syntax on
+colorscheme gruvbox
+set background=dark
+set number
+set expandtab
+set tabstop=2
+
+set hlsearch
+set incsearch
+
+" mappings:
+map <C-n> : NERDTreeToggle<CR>
+
