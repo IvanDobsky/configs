@@ -9,19 +9,51 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mutewinter/nginx.vim'
 "Git
 Plug 'tpope/vim-fugitive'
-
+"All-language autocompleters
+"Plug 'valloric/youcompleteme'
+Plug 'zxqfl/tabnine-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
 syntax on
+
+"Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_html_checkers = ['html', 'eslint', 'htmlhint']
+let g:syntastic_javascript_checkers = ['eslint', 'jslint']
+
+
 colorscheme gruvbox
-set background=dark
+let background='dark'
+"let g:gruvbox_bold=0
+let g:gruvbox_contrast_dark='soft'
+"g:gruvbox_number_column=grey
 set number
 set expandtab
-set tabstop=2
+set tabstop=2 shiftwidth=2
+set list! 
+set listchars=tab:>-
 
+"indentline
+let g:indentLine_char = '.'
+let g:indentLine_color_term = 239
+set list lcs=tab:\.\
+
+let g:airline_theme='bubblegum'
 set hlsearch
 set incsearch
+
 
 " mappings:
 map <C-n> : NERDTreeToggle<CR>
