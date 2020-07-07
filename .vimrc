@@ -11,10 +11,13 @@ Plug 'mutewinter/nginx.vim'
 Plug 'tpope/vim-fugitive'
 "All-language autocompleters
 "Plug 'valloric/youcompleteme'
-Plug 'zxqfl/tabnine-vim'
+"Plug 'zxqfl/tabnine-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 
 call plug#end()
 
@@ -53,7 +56,14 @@ set list lcs=tab:\.\
 let g:airline_theme='bubblegum'
 set hlsearch
 set incsearch
+set foldenable
+"set foldmethod=indent
+"set foldmethod=manual
 
+"Snipmate
+"let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+"let g:snipMate.scope_aliases = {}
+"let g:snipMate.scope_aliases['html'] = 'html'
 
 " mappings:
 map <C-n> : NERDTreeToggle<CR>
