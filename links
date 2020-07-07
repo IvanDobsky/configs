@@ -6,17 +6,17 @@ ln -rs /home/pi/dotfiles/.tmux.conf .tmux.conf
 #установка vim-plug sh скриптом для linux
 #
 #подключить конфиг
-# открыть nvim, набрать :h basic-directories он отобразит пути
+# открыть nvim, набрать :h base-directories он отобразит пути
 #
 # mkdir -p ~/.config/nvim
 #
-# Then create a ~/.config/nvim/init.vim file with the following contents:
+# Then create: ~/.config/nvim/init.vim file with the following contents:
 #
 # set runtimepath^=~/.vim runtimepath+=~/.vim/after
 # let &packpath = &runtimepath
-# source ~/.vimrc
+# source ~/dotfiles/configs/.vimrc
+# после этого символьная ссылка не нужна
 #
-# внутри этой папки создать символьную ссылку на свой файл
-# sudo ln -rs /home/mike/dotfiles/configs/.vimrc
-#
-#
+# Подключить конфиг к tmux:
+# 
+# in terminal: tmux source ~/dotfiles/configs/.tmux.conf
